@@ -24,9 +24,9 @@ public class ClientServiceBean implements ClientService {
             return new ClientDTO(
                     client.getId(),
                     client.getCompany(),
-                    client.getTax(),
                     client.getAddress(),
-                    client.getPhone());
+                    client.getPhone(),
+                    client.getTax());
         } else {
             throw new Exception("Client is not found in the system");
         }
@@ -40,9 +40,9 @@ public class ClientServiceBean implements ClientService {
                                 new ClientDTO(
                                         client.getId(),
                                         client.getCompany(),
-                                        client.getTax(),
                                         client.getAddress(),
-                                        client.getPhone()))
+                                        client.getPhone(),
+                                        client.getTax()))
                 .collect(Collectors.toList());
     }
 

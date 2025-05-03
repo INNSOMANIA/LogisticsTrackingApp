@@ -6,11 +6,11 @@ import lombok.*;
 
 @Table(name = "client")
 @Entity
-@Builder
 @Getter
 @Setter
-@RequiredArgsConstructor
+@Builder(toBuilder = true)
 @AllArgsConstructor
+@NoArgsConstructor
 public class Client {
 
     @Id
@@ -25,17 +25,9 @@ public class Client {
     @Column(name = "tax", nullable = false)
     private String tax;
 
-    @Column(name = "phone", nullable = false)
-    private long phone;
-
     @Column(name = "address", nullable = false)
     private String address;
 
-    public Client(long id, String company, String tax, String address, long phone) {
-        this.id = id;
-        this.company = company;
-        this.tax = tax;
-        this.address = address;
-        this.phone = phone;
-    }
+    @Column(name = "phone", nullable = false)
+    private Long phone;
 }
