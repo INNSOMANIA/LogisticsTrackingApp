@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ClientRepository<T extends Client>  extends JpaRepository<Client , Long> {
+
     Optional<Client> findById(Long clientId);
 
     List<Client> findAll();
