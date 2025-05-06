@@ -1,8 +1,8 @@
 package com.arcode.arlogistaapp.driver.dto;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -18,7 +18,7 @@ public class DriverDTO implements Serializable {
     private final String surname;
     private final String email;
     private final String address;
-    private final String lisence;
+    private final String licence;
     private final Long phone;
 
     public DriverDTO(long id, String name, String surname, String email, String address, String licence, Long phone) {
@@ -28,6 +28,6 @@ public class DriverDTO implements Serializable {
         this.phone = isNull(phone) ? 0 : phone;
         this.email = email;
         this.address = address;
-        this.lisence = licence;
+        this.licence = licence;
     }
 }

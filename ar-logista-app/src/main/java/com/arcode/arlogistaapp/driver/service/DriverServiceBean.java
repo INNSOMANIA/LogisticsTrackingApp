@@ -55,11 +55,12 @@ public class DriverServiceBean implements DriverService {
     public void addDriver(DriverDTO driverDTO) {
         final Driver driver =
                 Driver.builder()
+                        .id(driverDTO.getId())
                         .name(driverDTO.getName())
                         .surname(driverDTO.getSurname())
                         .email(driverDTO.getEmail())
                         .address(driverDTO.getAddress())
-                        .licence(driverDTO.getLisence())
+                        .licence(driverDTO.getLicence())
                         .phone(driverDTO.getPhone())
                         .build();
 
