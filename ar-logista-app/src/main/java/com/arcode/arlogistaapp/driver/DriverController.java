@@ -25,7 +25,7 @@ public class DriverController {
     }
 
     @PostMapping(value = "/add")
-    public void addDeriver(@RequestBody DriverDTO driverDTO) {
+    public void addDriver(@RequestBody DriverDTO driverDTO) {
         driverService.addDriver(driverDTO);
     }
 
